@@ -21,7 +21,7 @@
 <body>
 
   <nav
-    style="padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: 100;">
+    style="padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: 100;">
     <a href="#" class="logo serif" style="font-size: 1.5rem; font-weight: 600; letter-spacing: 1px;">ORIGO</a>
     <div class="nav-links"
       style="display: flex; gap: 2rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
@@ -30,7 +30,21 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
+    <!-- Hamburger button (mobile only) -->
+    <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#services" class="mobile-nav-link">Services</a>
+    <a href="#process" class="mobile-nav-link">Process</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
 
   <main>
     <!-- Hero Section -->

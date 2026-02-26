@@ -100,11 +100,53 @@ const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
     nav.classList.add('scrolled');
-    nav.style.padding = "1rem 4rem";
+    nav.style.padding = "1rem 2rem";
   } else {
     nav.classList.remove('scrolled');
-    nav.style.padding = "2rem 4rem";
+    nav.style.padding = "1.25rem 2rem";
   }
 });
+
+// 10. Hamburger Mobile Menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function openMenu() {
+  hamburger.classList.add('is-open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  mobileMenu.style.display = 'flex';
+  // Force reflow so the transition plays
+  mobileMenu.getBoundingClientRect();
+  mobileMenu.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  hamburger.classList.remove('is-open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileMenu.classList.remove('is-open');
+  document.body.style.overflow = '';
+  // Hide after transition ends
+  mobileMenu.addEventListener('transitionend', () => {
+    if (!mobileMenu.classList.contains('is-open')) {
+      mobileMenu.style.display = '';
+    }
+  }, { once: true });
+}
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    if (hamburger.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close when a nav link is tapped
+  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+}
 
 console.log('Origo Brand Story Studio - Interactions Loaded');
