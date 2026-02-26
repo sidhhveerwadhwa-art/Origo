@@ -400,9 +400,9 @@ footer {
 }
 
 .mobile-nav-link {
-    padding: 1.1rem 0;
-    font-size: 1.5rem;
-    font-family: var(--font-serif);
+    padding: 0.85rem 0;
+    font-size: 1rem;
+    font-family: var(--font-sans);
     font-weight: 500;
     color: var(--color-ink);
     text-transform: uppercase;
