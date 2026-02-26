@@ -221,37 +221,102 @@ nav.scrolled {
     transform: translateY(-2px);
 }
 
-/* Responsive Grid/Flex */
+/* Responsive Refinements */
 @media (max-width: 968px) {
     :root {
         --section-padding: 5rem 1.5rem;
     }
 
-    .founder>.container>div {
+    .founder-grid,
+    .hero-container,
+    .manifesto-container {
         grid-template-columns: 1fr !important;
         gap: 3rem !important;
     }
 
     h1 {
-        font-size: 3.5rem !important;
+        font-size: clamp(2.5rem, 8vw, 4rem) !important;
     }
 }
 
-@media (max-width: 640px) {
-    nav .nav-links {
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 2rem !important;
+    }
+
+    .nav-links {
         display: none !important;
     }
 
-    h1 {
-        font-size: 2.5rem !important;
+    .hero {
+        height: auto !important;
+        padding-top: 10rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    .hero-bg-text {
+        font-size: 80vw !important;
+        opacity: 0.02 !important;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-card {
+        padding: 2rem !important;
+    }
+
+    /* Fixing Side-by-Side Flex Layouts */
+    .flex-mobile-stack {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2rem !important;
+    }
+
+    .flex-mobile-stack>* {
+        max-width: 100% !important;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .process-step div:first-child {
+        font-size: 3rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .founder-image {
+        aspect-ratio: 1/1 !important;
+    }
+
+    .founder-image img {
+        object-position: center 20% !important;
+    }
+
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    footer .container {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2.25rem !important;
     }
 
     .cta h2 {
         font-size: 2.5rem !important;
-    }
-
-    .cta a {
-        font-size: 1.25rem !important;
     }
 }
 
