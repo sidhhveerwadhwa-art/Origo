@@ -308,6 +308,17 @@ nav.scrolled {
         gap: 1.5rem !important;
         text-align: center !important;
     }
+
+    /* Tighten container padding on mobile */
+    .container {
+        padding: 0 1.25rem !important;
+    }
+
+    /* Testimonials: reduce left-border card indent */
+    .testimonials .container>div>div {
+        padding-left: 1rem !important;
+    }
+
 }
 
 @media (max-width: 480px) {
