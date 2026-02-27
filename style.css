@@ -1,11 +1,13 @@
 :root {
-    /* Color Palette - Luxury Editorial */
-    --color-parchment: #F5EFE6;
-    --color-ink: #14100D;
-    --color-rust: #B85C38;
-    --color-fog: #6D6A66;
-    /* Warm fog for body text */
+    /* Color Palette - Blue & White Brand */
+    --color-parchment: #FFFFFF;
+    --color-ink: #0A1628;
+    --color-rust: #1E6FD9;
+    --color-fog: #5A7099;
+    /* Blue-grey for body text */
     --color-white: #FFFFFF;
+    --color-blue-light: #EEF4FD;
+    /* Soft blue tint for subtle backgrounds */
 
     /* Typography */
     --font-serif: "Playfair Display", serif;
@@ -21,19 +23,19 @@
 }
 
 [data-theme="dark"] {
-    --color-parchment: #14100D;
-    --color-ink: #F5EFE6;
-    --color-fog: #A09D98;
-    --color-rust: #D17C5B;
-    --nav-bg: rgba(20, 16, 13, 0.9);
-    --nav-border: rgba(245, 239, 230, 0.1);
-    --border-soft: rgba(245, 239, 230, 0.1);
+    --color-parchment: #070E1A;
+    --color-ink: #E8F0FE;
+    --color-fog: #8BA3C7;
+    --color-rust: #4D8FE8;
+    --nav-bg: rgba(7, 14, 26, 0.9);
+    --nav-border: rgba(232, 240, 254, 0.1);
+    --border-soft: rgba(232, 240, 254, 0.1);
 }
 
 :root {
-    --nav-bg: rgba(245, 239, 230, 0.8);
-    --nav-border: rgba(20, 16, 13, 0.05);
-    --border-soft: rgba(20, 16, 13, 0.1);
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --nav-border: rgba(10, 22, 40, 0.06);
+    --border-soft: rgba(10, 22, 40, 0.1);
 }
 
 body,
@@ -124,8 +126,8 @@ nav.scrolled {
 }
 
 [data-theme="dark"] .bg-ink {
-    background-color: #0A0807;
-    /* Even darker for contrast */
+    background-color: #040A12;
+    /* Even darker navy for contrast */
     color: var(--color-ink);
 }
 
@@ -150,14 +152,15 @@ nav.scrolled {
 /* Service Cards Hover */
 .service-card:hover {
     background-color: var(--color-ink);
-    color: var(--color-parchment);
+    color: var(--color-white);
     transform: translateY(-10px);
     border-color: var(--color-rust);
+    box-shadow: 0 20px 60px rgba(30, 111, 217, 0.2);
 }
 
 .service-card:hover p {
-    color: var(--color-parchment);
-    opacity: 0.7;
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
 }
 
 /* Ticker Animation */
@@ -192,28 +195,29 @@ nav.scrolled {
     height: 60px;
     border-radius: 50%;
     background-color: var(--color-ink);
-    color: var(--color-parchment);
+    color: var(--color-white);
     border: 1px solid var(--color-rust);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(30, 111, 217, 0.3);
 }
 
 .theme-toggle:hover {
     transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 15px 40px rgba(30, 111, 217, 0.4);
 }
 
 .theme-toggle svg {
     width: 28px;
     height: 28px;
-    stroke: var(--color-parchment);
+    stroke: var(--color-white);
 }
 
 [data-theme="dark"] .theme-toggle svg {
-    fill: var(--color-parchment);
+    fill: var(--color-white);
 }
 
 .btn:hover {
@@ -333,14 +337,14 @@ nav.scrolled {
 
 /* Footer Theme Refinement */
 footer {
-    background-color: var(--color-parchment);
+    background-color: var(--color-blue-light);
     color: var(--color-ink);
     border-top: 1px solid var(--border-soft);
     transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
 
 [data-theme="dark"] footer {
-    background-color: #0A0807;
+    background-color: #040A12;
 }
 
 /* ========== HAMBURGER MENU ========== */
@@ -403,7 +407,7 @@ footer {
 }
 
 [data-theme="dark"] .mobile-menu {
-    background-color: #14100D;
+    background-color: #070E1A;
 }
 
 .mobile-menu.is-open {
