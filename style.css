@@ -494,3 +494,60 @@ footer {
         display: flex;
     }
 }
+
+/* ========================================
+   DARK MODE — Inline Style Overrides
+   These use !important to override inline
+   background/color values that CSS vars
+   can't reach through the cascade alone.
+   ======================================== */
+
+/* Hero section — override hardcoded gradient */
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #070E1A 0%, #0D1B30 60%, #0A1628 100%) !important;
+}
+
+/* Hero heading and text — ensure readability */
+[data-theme="dark"] .hero h1 {
+    color: #E8F0FE !important;
+}
+
+[data-theme="dark"] .hero p {
+    color: #8BA3C7 !important;
+}
+
+/* Services section — override --color-blue-light which stays light in dark mode */
+[data-theme="dark"] .services {
+    background-color: #0D1B30 !important;
+}
+
+/* Service cards — override hardcoded background: #fff */
+[data-theme="dark"] .service-card {
+    background: #0D1B30 !important;
+    border-color: rgba(77, 143, 232, 0.25) !important;
+    color: #E8F0FE !important;
+}
+
+[data-theme="dark"] .service-card p {
+    color: #8BA3C7 !important;
+}
+
+/* Testimonials section — override --color-blue-light */
+[data-theme="dark"] .testimonials {
+    background: #040A12 !important;
+}
+
+/* Testimonial cards — override hardcoded background: #fff */
+[data-theme="dark"] .testimonials .container>div>div {
+    background: #0D1B30 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    color: #E8F0FE !important;
+}
+
+[data-theme="dark"] .testimonials .container>div>div p {
+    color: #C5D5EE !important;
+}
+
+[data-theme="dark"] .testimonials .container>div>div span {
+    color: #E8F0FE !important;
+}
