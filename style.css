@@ -136,6 +136,20 @@ nav.scrolled {
     color: var(--color-white);
 }
 
+/* Section Scroll Offset — prevents fixed nav from covering headings on anchor jump */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* Services section — alternating background rhythm */
+.services {
+    background-color: var(--color-blue-light);
+}
+
+[data-theme="dark"] .services {
+    background-color: #0D1B30;
+}
+
 .section-padding {
     padding: var(--section-padding);
 }
@@ -323,15 +337,53 @@ nav.scrolled {
         padding-left: 1rem !important;
     }
 
+    /* CTA email link — prevent overflow on small screens */
+    .cta a[href^="mailto"] {
+        font-size: 1.2rem !important;
+        word-break: break-all;
+    }
+
+    /* Hero subtitle font tweak */
+    .hero p {
+        font-size: 1rem !important;
+    }
+
+    /* CTA buttons — full width on mobile for easier tapping */
+    .cta .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Ticker text size reduction on mobile */
+    .ticker-content {
+        font-size: 1rem !important;
+    }
+
 }
 
 @media (max-width: 480px) {
     h2 {
-        font-size: 2.25rem !important;
+        font-size: 2rem !important;
     }
 
     .cta h2 {
-        font-size: 2.5rem !important;
+        font-size: 2.2rem !important;
+    }
+
+    /* Tighten hero padding on very small screens */
+    .hero {
+        padding-top: 8rem !important;
+        padding-bottom: 4rem !important;
+    }
+
+    /* Nav brand name size */
+    .logo {
+        font-size: 1.25rem !important;
+    }
+
+    /* Process steps number */
+    .process div[style*="font-size: 4rem"] {
+        font-size: 3rem !important;
     }
 }
 
